@@ -1,7 +1,8 @@
 
 # installer folder venv
 
-1/ venv\Scripts\Activate.ps1   
+1/python -m venv venv
+venv\Scripts\Activate.ps1   
 
 
 
