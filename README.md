@@ -1,40 +1,22 @@
 
-# installer folder venv
+# 1) Clone the repository
+git clone https://github.com/heisenberg0123/Resume-Category-Prediction-App.git
+cd "Resume-Category-Prediction-App"
 
-1/python -m venv venv
+# 2) Create virtual environment
+python -m venv venv
 
-venv\Scripts\Activate.ps1   
+# 3) Activate virtual environment
+.\venv\Scripts\Activate.ps1
 
+# 4) Upgrade pip
+python -m pip install --upgrade pip
 
+# 5) Install dependencies
+python -m pip install -r .\reqiurements.txt
 
+# 6) Recreate model pickles (recommended for binary compatibility)
+python .\recreate_pickles.py
 
-# open venv 
-
-2/   python -m venv venv           
-
-
-
-
-
-# install requirements 
-
-3/  python -m pip install --upgrade pip
-
-python -m pip install -r reqiurements.txt
-
-
-
-
-
-# Recreate model artifacts inside this environment
-This ensures binary-compatibility with NumPy/pandas/scikit-learn used here.
-
-4/  python .\recreate_pickles.py
-
-
-
-
-
-# executer l'application
-
-5/streamlit run .\app.py   
+# 7) Run the Streamlit app
+streamlit run .\app.py  
